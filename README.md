@@ -1,86 +1,96 @@
+<img width="1285" height="725" alt="Screenshot 2025-12-25 185054" src="https://github.com/user-attachments/assets/b9fffdf5-5d76-477c-a50e-ea6e76aba298" />
+
 📊 Bank Churn Analysis | Power BI
 🔍 Project Overview
 
-This project analyzes customer churn behavior using Microsoft Power BI to identify churn drivers, high-risk customer segments, and actionable retention insights. The dashboard enables business users to quickly understand who is churning, why they are churning, and where to focus retention efforts.
+This project analyzes bank customer churn to identify key factors influencing why customers leave the bank. Using multiple customer-related datasets, the dashboard provides actionable insights to support retention strategies, loyalty programs, and business decision-making.
 
-🎯 Objectives
+The analysis focuses on demographics, financial behavior, product usage, and customer activity to highlight churn patterns and high-risk customer segments.
 
-Calculate overall churn rate
+📂 Data Sources
 
-Identify key churn drivers
+The model integrates data from the following tables:
 
-Segment customers by tenure, contract type, and payment method
+-CustomerInfo
 
-Analyze churn trends and customer behavior patterns
+-Bank_Churn
 
-🔄 Data Preparation & Transformations
+-ActiveCustomer
 
-Cleaned and standardized raw customer data using Power Query
+-CreditCard
 
-Handled missing values and removed duplicates
+-ExitCustomer
 
-Converted data types for accurate calculations
+-Gender
 
-Created derived columns such as:
+-Geography
 
-Tenure Groups (New / Medium / Long-term)
+Each table contributes attributes such as credit score, age, tenure, balance, product count, activity status, and churn flag.
 
-Churn Status Labels
+🔧 Key Data Transformations (Power Query)
 
-Customer Segments
+The following transformations were applied to prepare clean, analysis-ready data:
 
-📐 Data Modeling & DAX
+-Removed non-impact columns (RowNumber, Surname)
 
-Built optimized relationships for analytical performance
+-Converted data types (dates, numeric, categorical fields)
 
-Developed key DAX measures:
+-Created Credit Score Bands
+    (Excellent, Very Good, Good, Fair, Poor)
 
-Total Customers
+-Standardized binary flags
+    (HasCrCard, IsActiveMember, Exited → Yes/No labels)
 
-Churned Customers
+-Cleaned and validated Bank DOJ (Date of Joining)
 
-Churn Rate (%)
+-Merged lookup tables for Gender and Geography
 
-Average Tenure & Monthly Charges
+-Handled nulls and inconsistencies
 
-📈 Dashboard Highlights
+-Built a star-schema friendly model for performance
 
-KPI cards for churn metrics
+📈 Analysis & Insights
 
-Churn analysis by:
+-Customers with lower credit scores, lower balances, and fewer products show higher churn
 
-Contract Type
+-Inactive members are significantly more likely to exit
 
-Tenure Group
+-Geography and age groups influence churn behavior
 
-Payment Method
+-Customers holding credit cards are more likely to be retained
 
-Customer Segment
+-Long-tenure customers demonstrate higher loyalty
 
-Interactive slicers and drill-through for deeper insights
+🛠 Tools & Skills Used
 
-💡 Key Insights
+-Power BI
 
-Month-to-month contracts show the highest churn
+-Power Query (ETL)
 
-New customers have a higher churn risk
+-Data Modeling
 
-Higher monthly charges correlate with increased churn
+-DAX Measures
 
-Long-term contracts significantly reduce churn
+-Business Requirement Analysis
 
-🛠️ Tools Used
+-Dashboard Design & Storytelling
 
-Power BI
+🎯 Business Value
 
-Power Query (ETL)
+The dashboard helps stakeholders:
 
-DAX
+-Identify high-risk churn customers
 
-Data Modeling & Visualization
+-Understand drivers of churn
 
-🚀 Outcome
+-Support targeted retention campaigns
 
-This project demonstrates the ability to transform raw data into business-ready insights, build scalable Power BI models, and design dashboards that support data-driven retention strategies.
+-Improve customer lifetime value
+
+
+
+
+
+
 
 
